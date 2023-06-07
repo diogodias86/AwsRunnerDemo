@@ -14,7 +14,7 @@ namespace AwsRunnerDemo.Pages
 
         public void OnGet()
         {
-
+            Thread.Sleep(2000);
         }
     }
 }
