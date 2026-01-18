@@ -8,7 +8,7 @@ RUN dotnet restore
 
 # Copy all the remaining source code and build the application
 COPY . .
-RUN dotnet publish -c Release -o /app --no-restore
+RUN dotnet publish --property:PublishDir=/app -c Release --no-restore
 
 # Stage 2: Run the application
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
